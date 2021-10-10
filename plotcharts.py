@@ -175,3 +175,25 @@ def plot_energy_consumption(data):
     plt.ylabel("Wh")
     plt.legend(loc='best')
     plt.show()
+    
+def plot_evaluation(train_actual, train_predictions, test_actual, test_predictions):
+    title = 'RF Model Evaluation'
+    train_act = plt.plot(train_actual, color='teal', label='Train Actual')
+    train_pred = plt.plot(train_predictions, color='darkgoldenrod', label='Train Predictions')
+    test_act = plt.plot(test_actual, color='turquoise', label='Test Actual')
+    test_pred = plt.plot(test_predictions, color='darkkhaki', label='Test Predictions')
+    plt.xlabel("Time")
+    plt.ylabel("Watt")
+    plt.legend(loc='best')
+    plt.title(title)
+    plt.show()
+    
+def plot_predictions(actual, predictions):
+    title = 'RF Model Predictions'
+    act = plt.plot(actual, color='teal', label='Actual Values')
+    pred = plt.plot(predictions, color='darkgoldenrod', label='Predictions')
+    plt.xlabel("Time")
+    plt.ylabel("Watt")
+    plt.legend(loc='best')
+    plt.title(title)
+    plt.show()
